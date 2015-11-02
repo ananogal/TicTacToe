@@ -8,9 +8,27 @@
 
 #import "Game.h"
 
+@interface Game ()
+
+@property (nonatomic, assign) enum Player turnToPlay;
+@end
+
 @implementation Game
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.turnToPlay = PlayerX;
+    }
+    return self;
+}
+
 - (enum GameStatus)playTurn:(enum Player)player {
+    
+    if(self.turnToPlay == player) {
+        return GamePlayed;
+    }
     return GameNotPlayed;
 }
 @end

@@ -16,11 +16,26 @@
 
 @implementation TicTacToeTests
 
+Game* game;
+
+- (void)setUp {
+    [super setUp];
+    
+    game = [Game new];
+}
+
 - (void)testGameStartsAlwaysWithPlayerX {
-    Game* game = [Game new];
     
     enum GameStatus status = [game playTurn:PlayerO];
     
     XCTAssertTrue(status == GameNotPlayed);
+}
+
+- (void)testPlayerXCanPlayFirst {
+    
+    enum GameStatus status = [game playTurn:PlayerX];
+    
+    XCTAssertTrue(status == GamePlayed);
+
 }
 @end
