@@ -13,5 +13,28 @@ enum GameStatus {
 
 enum Player {
     PlayerX,
-    PlayerO
+    PlayerO,
+    None
 };
+
+enum CellStatus {
+    CellEmpty,
+    CellFull
+};
+
+struct Position {
+    NSInteger x;
+    NSInteger y;
+};
+
+static inline struct Position PositionMake(NSInteger x, NSInteger y) {
+    struct Position position;
+    position.x = x;
+    position.y = y;
+    
+    return position;
+}
+
+static inline BOOL PositionsAreEqual(struct Position positionLeft, struct Position positionRight) {
+    return positionLeft.x == positionRight.x && positionLeft.y == positionRight.y;
+}

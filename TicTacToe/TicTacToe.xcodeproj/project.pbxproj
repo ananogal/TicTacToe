@@ -13,6 +13,8 @@
 		9375BBF81BE80CFF0012EE75 /* Game.h in Headers */ = {isa = PBXBuildFile; fileRef = 9375BBF61BE80CFF0012EE75 /* Game.h */; };
 		9375BBF91BE80CFF0012EE75 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 9375BBF71BE80CFF0012EE75 /* Game.m */; };
 		9375BBFB1BE80DBA0012EE75 /* Enums.h in Headers */ = {isa = PBXBuildFile; fileRef = 9375BBFA1BE80DBA0012EE75 /* Enums.h */; };
+		93E8892F1BEDF9A900F671A0 /* Cell.h in Headers */ = {isa = PBXBuildFile; fileRef = 93E8892D1BEDF9A900F671A0 /* Cell.h */; };
+		93E889301BEDF9A900F671A0 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E8892E1BEDF9A900F671A0 /* Cell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 		9375BBF61BE80CFF0012EE75 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		9375BBF71BE80CFF0012EE75 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		9375BBFA1BE80DBA0012EE75 /* Enums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
+		93E8892D1BEDF9A900F671A0 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		93E8892E1BEDF9A900F671A0 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 				9375BBF61BE80CFF0012EE75 /* Game.h */,
 				9375BBF71BE80CFF0012EE75 /* Game.m */,
 				9375BBFA1BE80DBA0012EE75 /* Enums.h */,
+				93E8892D1BEDF9A900F671A0 /* Cell.h */,
+				93E8892E1BEDF9A900F671A0 /* Cell.m */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -102,6 +108,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93E8892F1BEDF9A900F671A0 /* Cell.h in Headers */,
 				9375BBFB1BE80DBA0012EE75 /* Enums.h in Headers */,
 				9375BBF81BE80CFF0012EE75 /* Game.h in Headers */,
 				9375BBE01BE80A4A0012EE75 /* TicTacToe.h in Headers */,
@@ -205,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9375BBF91BE80CFF0012EE75 /* Game.m in Sources */,
+				93E889301BEDF9A900F671A0 /* Cell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

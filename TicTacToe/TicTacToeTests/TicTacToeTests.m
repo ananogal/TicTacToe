@@ -26,23 +26,40 @@ Game* game;
 
 - (void)testGameStartsAlwaysWithPlayerX {
     
-    enum GameStatus status = [game playTurn:PlayerO];
+    enum GameStatus status = [game playTurn:PlayerO forPosition: PositionMake(1, 1)];
     
     XCTAssertTrue(status == GameNotPlayed);
 }
 
 - (void)testPlayerXCanPlayFirst {
     
-    enum GameStatus status = [game playTurn:PlayerX];
+    enum GameStatus status = [game playTurn:PlayerX forPosition: PositionMake(1, 1)];
     
     XCTAssertTrue(status == GamePlayed);
 
 }
 
-- (void)testPlayersMustAlternate{
-    [game playTurn:PlayerX];
-    enum GameStatus status = [game playTurn:PlayerX];
+- (void)testPlayersMustAlternate {
+    
+    [game playTurn:PlayerX forPosition: PositionMake(1, 1)];
+    enum GameStatus status = [game playTurn:PlayerX forPosition: PositionMake(1, 1)];
     
     XCTAssertTrue(status == GameNotPlayed);
 }
+
+- (void)testPlayerPlaysForAPosition {
+    enum GameStatus status = [game playTurn:PlayerX forPosition: PositionMake(1, 1)];
+    
+    XCTAssertTrue(status == GamePlayed);
+}
+
+- (void)testPlayerCantPlayInAFilledCell {
+
+    [game playTurn:PlayerX forPosition: PositionMake(1, 1)];
+    enum GameStatus status = [game playTurn:PlayerO forPosition: PositionMake(1, 1)];
+    
+    XCTAssertTrue(status == GameNotPlayed);
+}
+
 @end
+

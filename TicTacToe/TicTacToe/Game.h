@@ -11,5 +11,5 @@
 
 @interface Game : NSObject
 
-- (enum GameStatus)playTurn:(enum Player)player;
+- (enum GameStatus)playTurn:(enum Player)player forPosition:(struct Position)position;
 @end
