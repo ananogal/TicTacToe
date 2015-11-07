@@ -61,5 +61,14 @@ Game* game;
     XCTAssertTrue(status == GameNotPlayed);
 }
 
+- (void)testIfPlayerCantPlayInACellStillisIsTurn {
+    
+    [game playTurn:PlayerX forPosition: PositionMake(1, 1)];
+    [game playTurn:PlayerO forPosition: PositionMake(1, 1)];
+    enum GameStatus status = [game playTurn:PlayerO forPosition: PositionMake(1, 2)];
+    
+    XCTAssertTrue(status == GamePlayed);
+}
+
 @end
 

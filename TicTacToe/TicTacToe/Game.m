@@ -31,10 +31,12 @@ static const int MAX_ROWS = 3;
 }
 
 - (enum GameStatus)playTurn:(enum Player)player forPosition:(struct Position)position {
-    
     if(self.turnToPlay == player) {
         enum GameStatus status = [self play:player forPosition:position];
-        self.turnToPlay = self.turnToPlay == PlayerX ? PlayerO : PlayerX;
+        if (status == GamePlayed) {
+            self.turnToPlay = self.turnToPlay == PlayerX ? PlayerO : PlayerX;
+        }
+        
         return status;
     }
     
