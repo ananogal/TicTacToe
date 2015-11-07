@@ -27,6 +27,7 @@
 - (enum GameStatus)playTurn:(enum Player)player {
     
     if(self.turnToPlay == player) {
+        self.turnToPlay = self.turnToPlay == PlayerX ? PlayerO : PlayerX;
         return GamePlayed;
     }
     return GameNotPlayed;

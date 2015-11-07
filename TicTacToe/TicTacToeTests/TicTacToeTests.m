@@ -38,4 +38,11 @@ Game* game;
     XCTAssertTrue(status == GamePlayed);
 
 }
+
+- (void)testPlayersMustAlternate{
+    [game playTurn:PlayerX];
+    enum GameStatus status = [game playTurn:PlayerX];
+    
+    XCTAssertTrue(status == GameNotPlayed);
+}
 @end
