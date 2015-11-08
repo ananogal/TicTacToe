@@ -42,7 +42,7 @@
         return CellEmpty;
     }
     
-    return CellFull;
+    return CellFilled;
 }
 
 - (void)addPlayer:(enum Player)player {

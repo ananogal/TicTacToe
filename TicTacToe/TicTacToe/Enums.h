@@ -8,7 +8,9 @@
 
 enum GameStatus {
     GamePlayed,
-    GameNotPlayed
+    GameNotPlayed,
+    GameWinned,
+    GameTied
 };
 
 enum Player {
@@ -19,7 +21,7 @@ enum Player {
 
 enum CellStatus {
     CellEmpty,
-    CellFull
+    CellFilled
 };
 
 struct Position {

@@ -70,5 +70,14 @@ Game* game;
     XCTAssertTrue(status == GamePlayed);
 }
 
+- (void)testPlayerWinsIfAColumnIsFilled {
+    [game playTurn:PlayerX forPosition: PositionMake(1, 1)];
+    [game playTurn:PlayerO forPosition: PositionMake(2, 1)];
+    [game playTurn:PlayerX forPosition: PositionMake(1, 2)];
+    [game playTurn:PlayerO forPosition: PositionMake(3, 1)];
+    enum GameStatus status =  [game playTurn:PlayerX forPosition: PositionMake(1, 3)];
+    XCTAssertTrue(status == GameWinned);
+}
+
 @end
 
