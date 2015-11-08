@@ -38,6 +38,10 @@
                 status  = GameWinned;
             }
             
+            if([self.board isFull] == BoardIsFull) {
+                status = GameTied;
+            }
+            
             self.turnToPlay = self.turnToPlay == PlayerX ? PlayerO : PlayerX;
         }
         

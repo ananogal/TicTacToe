@@ -88,5 +88,20 @@ Game* game;
     XCTAssertTrue(status == GamePlayed);
 }
 
+- (void)testGameIsTieIfNoWinningColumn {
+    [game playTurn:PlayerX forPosition: PositionMake(1, 1)];
+    [game playTurn:PlayerO forPosition: PositionMake(1, 2)];
+    [game playTurn:PlayerX forPosition: PositionMake(1, 3)];
+    [game playTurn:PlayerO forPosition: PositionMake(2, 1)];
+    [game playTurn:PlayerX forPosition: PositionMake(2, 2)];
+    [game playTurn:PlayerO forPosition: PositionMake(3, 1)];
+    [game playTurn:PlayerX forPosition: PositionMake(2, 3)];
+    [game playTurn:PlayerO forPosition: PositionMake(3, 3)];
+    
+    enum GameStatus status =  [game playTurn:PlayerX forPosition: PositionMake(3, 2)];
+    
+    XCTAssertTrue(status == GameTied);
+}
+
 @end
 

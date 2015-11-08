@@ -14,5 +14,6 @@
 - (enum GameStatus)canPlayer:(enum Player)player playForPosition:(struct Position) position;
 
 - (enum BoardStatus)hasWinningPlayer:(enum Player)player;
+- (enum BoardStatus)isFull;
 
 @end

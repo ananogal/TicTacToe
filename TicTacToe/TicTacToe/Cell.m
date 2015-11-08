@@ -38,19 +38,19 @@
 }
 
 - (enum CellStatus)status {
+    return self.player == None ? CellEmpty : CellFilled;
+}
+
+- (enum CellStatus)isFilledWithPlayer:(enum Player)player {
     if(self.player == None) {
         return CellEmpty;
     }
     
-    return CellFilled;
-}
-
-- (enum CellStatus)isFilledWithPlayer:(enum Player)player {
     if(self.player == player) {
         return CellFilledWithPlayer;
     }
     
-    return [self status];
+    return CellFilled;
 }
 
 - (void)addPlayer:(enum Player)player {

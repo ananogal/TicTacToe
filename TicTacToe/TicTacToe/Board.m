@@ -77,6 +77,18 @@ static const int MAX_ROWS_COLUMNS = 3;
     return ColumnIsEmpty;
 }
 
+- (enum BoardStatus)isFull {
+
+    for (int i = 0; i<[self.grid count]; i++) {
+        Cell *cell = [self.grid objectAtIndex:i];
+        if([cell isFilledWithPlayer:None] == CellEmpty) {
+            return BoardIsEmpty;
+        }
+    }
+    
+    return BoardIsFull;
+}
+
 - (int)numberOfCellsFilledForPlayer:(enum Player)player inColumn:(NSArray*)column {
     
     int count = 0;

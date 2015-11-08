@@ -27,7 +27,9 @@ enum CellStatus {
 
 enum BoardStatus {
     ColumnIsWinner,
-    ColumnIsEmpty
+    ColumnIsEmpty,
+    BoardIsFull,
+    BoardIsEmpty
 };
 
 struct Position {
