@@ -36,7 +36,7 @@ static const int MAX_ROWS_COLUMNS = 3;
     if(self.turnToPlay == player) {
         enum GameStatus status = [self play:player forPosition:position];
         if (status == GamePlayed) {
-            status = [self boardHasWinningColumnFull];
+            status = [self boardHasWinningColumnFullForPlayer:player];
             self.turnToPlay = self.turnToPlay == PlayerX ? PlayerO : PlayerX;
         }
         
@@ -81,10 +81,10 @@ static const int MAX_ROWS_COLUMNS = 3;
     return GameNotPlayed;
 }
 
-- (enum GameStatus)boardHasWinningColumnFull {
+- (enum GameStatus)boardHasWinningColumnFullForPlayer:(enum Player)player {
     
     for (NSArray* column in self.winningColumns) {
-        int count = [self numberOfCellsFilledForColumn:column];
+        int count = [self numberOfCellsFilledForPlayer:player inColumn:column];
         if(count == MAX_ROWS_COLUMNS) {
             return GameWinned;
         }
@@ -93,14 +93,14 @@ static const int MAX_ROWS_COLUMNS = 3;
     return GamePlayed;
 }
 
-- (int)numberOfCellsFilledForColumn:(NSArray*)column {
+- (int)numberOfCellsFilledForPlayer:(enum Player)player inColumn:(NSArray*)column {
 
     int count = 0;
     
     for (int i = 0; i < [column count]; i++) {
         int index = [[column objectAtIndex:i] intValue];
         Cell *cell = [self.board objectAtIndex:index];
-        if ([cell status] == CellFilled) {
+        if ([cell isFilledWithPlayer:player] == CellFilled) {
             count += 1;
         }
     }

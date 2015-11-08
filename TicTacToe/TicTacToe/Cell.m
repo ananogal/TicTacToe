@@ -45,6 +45,14 @@
     return CellFilled;
 }
 
+- (enum CellStatus)isFilledWithPlayer:(enum Player)player {
+    if(self.player == player) {
+        return CellFilled;
+    }
+    
+    return CellEmpty;
+}
+
 - (void)addPlayer:(enum Player)player {
     if([self status] == CellEmpty) {
         self.player = player;

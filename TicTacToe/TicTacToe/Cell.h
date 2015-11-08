@@ -16,5 +16,6 @@
 - (enum CellStatus)status;
 - (BOOL)containsPosition:(struct Position)position;
 - (void)addPlayer:(enum Player)player;
+- (enum CellStatus)isFilledWithPlayer:(enum Player)player;
 
 @end
