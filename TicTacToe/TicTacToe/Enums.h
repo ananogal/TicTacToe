@@ -21,7 +21,13 @@ enum Player {
 
 enum CellStatus {
     CellEmpty,
-    CellFilled
+    CellFilled,
+    CellFilledWithPlayer
+};
+
+enum BoardStatus {
+    ColumnIsWinner,
+    ColumnIsEmpty
 };
 
 struct Position {

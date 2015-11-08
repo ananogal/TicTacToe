@@ -47,14 +47,14 @@
 
 - (enum CellStatus)isFilledWithPlayer:(enum Player)player {
     if(self.player == player) {
-        return CellFilled;
+        return CellFilledWithPlayer;
     }
     
-    return CellEmpty;
+    return [self status];
 }
 
 - (void)addPlayer:(enum Player)player {
-    if([self status] == CellEmpty) {
+    if(self.player == None) {
         self.player = player;
     }
 }

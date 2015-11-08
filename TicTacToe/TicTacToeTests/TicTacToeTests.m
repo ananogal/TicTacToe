@@ -88,6 +88,5 @@ Game* game;
     XCTAssertTrue(status == GamePlayed);
 }
 
-
 @end
 

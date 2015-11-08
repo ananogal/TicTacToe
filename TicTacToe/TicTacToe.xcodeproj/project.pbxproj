@@ -15,6 +15,8 @@
 		9375BBFB1BE80DBA0012EE75 /* Enums.h in Headers */ = {isa = PBXBuildFile; fileRef = 9375BBFA1BE80DBA0012EE75 /* Enums.h */; };
 		93E8892F1BEDF9A900F671A0 /* Cell.h in Headers */ = {isa = PBXBuildFile; fileRef = 93E8892D1BEDF9A900F671A0 /* Cell.h */; };
 		93E889301BEDF9A900F671A0 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E8892E1BEDF9A900F671A0 /* Cell.m */; };
+		93E8895B1BEF42D100F671A0 /* Board.h in Headers */ = {isa = PBXBuildFile; fileRef = 93E889591BEF42D100F671A0 /* Board.h */; };
+		93E8895C1BEF42D100F671A0 /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E8895A1BEF42D100F671A0 /* Board.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		9375BBFA1BE80DBA0012EE75 /* Enums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
 		93E8892D1BEDF9A900F671A0 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
 		93E8892E1BEDF9A900F671A0 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		93E889591BEF42D100F671A0 /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
+		93E8895A1BEF42D100F671A0 /* Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Board.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,8 @@
 				9375BBFA1BE80DBA0012EE75 /* Enums.h */,
 				93E8892D1BEDF9A900F671A0 /* Cell.h */,
 				93E8892E1BEDF9A900F671A0 /* Cell.m */,
+				93E889591BEF42D100F671A0 /* Board.h */,
+				93E8895A1BEF42D100F671A0 /* Board.m */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -112,6 +118,7 @@
 				9375BBFB1BE80DBA0012EE75 /* Enums.h in Headers */,
 				9375BBF81BE80CFF0012EE75 /* Game.h in Headers */,
 				9375BBE01BE80A4A0012EE75 /* TicTacToe.h in Headers */,
+				93E8895B1BEF42D100F671A0 /* Board.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93E8895C1BEF42D100F671A0 /* Board.m in Sources */,
 				9375BBF91BE80CFF0012EE75 /* Game.m in Sources */,
 				93E889301BEDF9A900F671A0 /* Cell.m in Sources */,
 			);
